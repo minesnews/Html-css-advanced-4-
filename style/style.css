@@ -3,13 +3,6 @@
   padding: 0;
 }
 
-@font-face {
-  font-family: "Lato";
-  src: url("698242188-Lato-Bla.eot");
-  src: url("698242188-Lato-Bla.eot?#iefix") format("embedded-opentype"), url("698242188-Lato-Bla.svg#Lato Black") format("svg"), url("698242188-Lato-Bla.woff") format("woff"), url("698242188-Lato-Bla.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 body {
   font-family: "Lato", sans-serif;
   scroll-behavior: smooth;
@@ -60,6 +53,48 @@ summary {
 
 .label {
   cursor: pointer;
+}
+
+#header__check {
+  display: none;
+}
+
+#header__check:checked ~ .menu {
+  display: none;
+}
+
+.menu {
+  position: absolute;
+  top: 75px;
+  right: 20%;
+  z-index: 2;
+  transition: right 1s;
+  background: #fff;
+  padding: 32px 74px 32px 32px;
+}
+.menu__heading {
+  color: #000;
+  font-size: 14px;
+  font-family: Lato;
+  font-weight: 700;
+}
+.menu__title {
+  display: block;
+  margin: 24px 0 12px 0;
+  color: #F16D7F;
+  font-size: 14px;
+  font-family: Lato;
+}
+.menu__list {
+  padding-left: 20px;
+  list-style: none;
+  display: grid;
+  gap: 11px;
+}
+.menu__list a {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-family: Lato;
 }
 
 .up {
@@ -175,7 +210,7 @@ summary {
   background: rgba(244, 244, 244, 0.7);
   background-size: cover;
   background-position: center;
-  background-image: url(../images/fon.svg);
+  background-image: url(../img/fon.svg);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
